@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Hub - مساحة عمل للفريلانسر</title>
+
+    <!-- ===== External Stylesheets ===== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- ===== Google Fonts ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ===== Custom Stylesheet ===== -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== SPLASH SCREEN ===== -->
+    <div id="splash-screen">
+        <div class="splash-glow"></div>
+        <div class="splash-ring ring1"></div>
+        <div class="splash-ring ring2"></div>
+        <div class="splash-shine"></div>
+        <div class="splash-particles">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
+        <img src="logo1.png" alt="Golden Hub" class="splash-logo" />
+        <div class="splash-line"></div>
+        <div class="splash-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- ===== MAIN NAVBAR ===== -->
+    <nav id="navbar">
+        <div class="nav-wrap">
+                <img src="logo1.png" alt="Golden Hub Logo" class="nav-logo-img" />
+            <a href="#home" class="nav-logo">
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#heroSlider" class="active"><span data-i18n="nav_home">الرئيسية</span></a></li>
+                <li><a href="about.html"><span data-i18n="nav_about">من نحن</span></a></li>
+                <li><a href="#services"><span data-i18n="nav_services">المميزات</span></a></li>
+                <li><a href="#spaces"><span data-i18n="nav_spaces">المساحات</span></a></li>
+                <li><a href="#pricing"><span data-i18n="nav_pricing">الأسعار</span></a></li>
+                <li><a href="contact.html"><span data-i18n="nav_contact">تواصل معنا</span></a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="lang-switch" id="langSwitch" role="button" tabindex="0" aria-label="Toggle language">
+                    <span class="lang-switch-pill"></span>
+                    <span class="lang-opt ar">AR</span>
+                    <span class="lang-opt en">EN</span>
+                </div>
+                <button class="book-btn" id="openBookingBtn" aria-label="Open booking form">
+                    <i class="fas fa-calendar-check"></i>
+                    <span data-i18n="btn_book">احجز الآن</span>
+                </button>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mob-menu" id="mobMenu">
+        <ul class="mob-links">
+            <li><a href="#heroSlider" class="mob-lnk"><span data-i18n="nav_home">الرئيسية</span> <span class="mob-num">01</span></a></li>
+            <li><a href="about.html" class="mob-lnk"><span data-i18n="nav_about">من نحن</span> <span class="mob-num">02</span></a></li>
+            <li><a href="#services" class="mob-lnk"><span data-i18n="nav_services">المميزات</span> <span class="mob-num">03</span></a></li>
+            <li><a href="#spaces" class="mob-lnk"><span data-i18n="nav_spaces">المساحات</span> <span class="mob-num">04</span></a></li>
+            <li><a href="#pricing" class="mob-lnk"><span data-i18n="nav_pricing">الأسعار</span> <span class="mob-num">05</span></a></li>
+            <li><a href="contact.html" class="mob-lnk"><span data-i18n="nav_contact">تواصل معنا</span> <span class="mob-num">06</span></a></li>
+        </ul>
+        <div class="mob-actions">
+            <div class="lang-switch" id="langSwitchMob" role="button" tabindex="0" aria-label="Toggle language">
+                <span class="lang-switch-pill"></span>
+                <span class="lang-opt ar">AR</span>
+                <span class="lang-opt en">EN</span>
+            </div>
+            <button class="book-btn" id="openBookingBtnMob" aria-label="Open booking form">
+                <i class="fas fa-calendar-check"></i>
+                <span data-i18n="btn_book">احجز الآن</span>
+            </button>
+        </div>
+        <div class="mob-social">
+            <a href="https://www.instagram.com/golden.hub.plus?igsh=emZkbzdoc2h2ejVq" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/14iPzP1RcJv/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@golden.hup" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/972595040260" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- ===== BOOKING MODAL ===== -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeBookingBtn" aria-label="Close booking modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-scroll">
+                <!-- Booking Form -->
+                <div id="bookingFormWrap">
+                    <div class="modal-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3 class="modal-title" data-i18n="modal_title">احجز مساحتك الآن</h3>
+                    <p class="modal-subtitle" data-i18n="modal_subtitle">عبّئ بياناتك وسنتواصل معك لتأكيد الحجز</p>
+                    <form id="bookingForm" novalidate>
+                        <div class="form-group">
+                            <label class="form-label" for="bookingName" data-i18n="f_name">الاسم الكامل</label>
+                            <input type="text" class="form-input" id="bookingName" name="name" required data-i18n-ph="f_name_ph" placeholder="اكتب اسمك الكامل" />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="bookingPhone" data-i18n="f_phone">رقم الهاتف</label>
+                                <input type="tel" class="form-input" id="bookingPhone" name="phone" required placeholder="05X XXX XXXX" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="bookingEmail" data-i18n="f_email">البريد الإلكتروني</label>
+                                <input type="email" class="form-input" id="bookingEmail" name="email" required placeholder="example@mail.com" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="bookingDate" data-i18n="f_date">تاريخ البدء</label>
+                            <input type="date" class="form-input" id="bookingDate" name="date" required />
+                        </div>
+                        <button type="submit" class="modal-submit" data-i18n="f_submit">تأكيد الحجز</button>
+                    </form>
+                </div>
+                <!-- Success Message -->
+                <div class="modal-success" id="bookingSuccess">
+                    <div class="modal-success-icon"><i class="fas fa-check"></i></div>
+                    <h3 data-i18n="success_title">تم الحجز بنجاح!</h3>
+                    <p data-i18n="success_text">سنتواصل معك خلال 24 ساعة لتأكيد التفاصيل</p>
+                    <div class="modal-success-bar">
+                        <div class="modal-success-bar-fill" id="successBarFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div id="cur-dot"></div>
+    <div id="cur-ring"></div>
+
+    <!-- ===== HERO SLIDER ===== -->
+    <section class="hero-slider" id="heroSlider">
+        <canvas id="hero-particles"></canvas>
+
+        <!-- Slide 1 -->
+        <div class="slide active" data-bg="hero.png">
+            <div class="slide-overlay"></div>
+            <div class="slide-grid"></div>
+            <div class="slide-scan"><span></span><span></span><span></span></div>
+            <div class="slide-vignette"></div>
+            <div class="slide-sparkles" id="sparkles1"></div>
+            <div class="hero-content from-right">
+                <span class="hero-subtitle"><span class="dot"></span><span data-i18n="hero_sub_1">Golden Hub</span><span class="dot"></span></span>
+                <h1 data-i18n="hero_title_1">مساحتك المثالية<br>للعمل <span class="gold">والإبداع</span></h1>
+                <p data-i18n="hero_desc_1">بيئة هادئة وعصرية للفريلانسرز ورواد الأعمال الذين يبحثون عن التميز.</p>
+                <div class="hero-btns">
+                    <a href="#pricing" class="hero-btn-primary"><i class="fas fa-gem"></i> <span data-i18n="hero_btn_primary">احجز مساحتك</span></a>
+                    <a href="#spaces" class="hero-btn-ghost"><i class="fas fa-play-circle"></i> <span data-i18n="hero_btn_ghost">استكشف</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" data-bg="hero4.png">
+            <div class="slide-overlay"></div>
+            <div class="slide-grid"></div>
+            <div class="slide-scan"><span></span><span></span><span></span></div>
+            <div class="slide-vignette"></div>
+            <div class="slide-sparkles" id="sparkles2"></div>
+            <div class="hero-content from-center">
+                <span class="hero-subtitle"><span class="dot"></span><span data-i18n="hero_sub_2">Work Smart</span><span class="dot"></span></span>
+                <h1 data-i18n="hero_title_2">كل ما تحتاجه<br>لإنجاز <span class="gold">أعمالك</span></h1>
+                <p data-i18n="hero_desc_2">إنترنت سريع ومساحات مريحة وتجربة احترافية لا مثيل لها.</p>
+                <div class="hero-btns">
+                    <a href="#pricing" class="hero-btn-primary"><i class="fas fa-gem"></i> <span data-i18n="hero_btn_primary">احجز مساحتك</span></a>
+                    <a href="#spaces" class="hero-btn-ghost"><i class="fas fa-play-circle"></i> <span data-i18n="hero_btn_ghost">استكشف</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" data-bg="hero2.png">
+            <div class="slide-overlay"></div>
+            <div class="slide-grid"></div>
+            <div class="slide-scan"><span></span><span></span><span></span></div>
+            <div class="slide-vignette"></div>
+            <div class="slide-sparkles" id="sparkles3"></div>
+            <div class="hero-content from-left">
+                <span class="hero-subtitle"><span class="dot"></span><span data-i18n="hero_sub_3">Creative Space</span><span class="dot"></span></span>
+                <h1 data-i18n="hero_title_3">اجتمع، ابتكر،<br><span class="gold">وانطلق</span></h1>
+                <p data-i18n="hero_desc_3">مساحات مصممة لتمنحك أعلى إنتاجية وأكثر إلهام.</p>
+                <div class="hero-btns">
+                    <a href="#pricing" class="hero-btn-primary"><i class="fas fa-gem"></i> <span data-i18n="hero_btn_primary">احجز مساحتك</span></a>
+                    <a href="#spaces" class="hero-btn-ghost"><i class="fas fa-play-circle"></i> <span data-i18n="hero_btn_ghost">استكشف</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" data-bg="hero3.png">
+            <div class="slide-overlay"></div>
+            <div class="slide-grid"></div>
+            <div class="slide-scan"><span></span><span></span><span></span></div>
+            <div class="slide-vignette"></div>
+            <div class="slide-sparkles" id="sparkles4"></div>
+            <div class="hero-content from-right">
+                <span class="hero-subtitle"><span class="dot"></span><span data-i18n="hero_sub_4">Premium Experience</span><span class="dot"></span></span>
+                <h1 data-i18n="hero_title_4">استمتع بأجواء<br>عمل <span class="gold">فاخرة</span></h1>
+                <p data-i18n="hero_desc_4">تصميم عصري وخدمات متكاملة في مكان واحد يليق بطموحك.</p>
+                <div class="hero-btns">
+                    <a href="#pricing" class="hero-btn-primary"><i class="fas fa-gem"></i> <span data-i18n="hero_btn_primary">احجز مساحتك</span></a>
+                    <a href="#spaces" class="hero-btn-ghost"><i class="fas fa-play-circle"></i> <span data-i18n="hero_btn_ghost">استكشف</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-btn prev-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <div class="slide-counter">
+            <span class="counter-current" id="counterCurrent">01</span>
+            <div class="counter-sep"></div>
+            <span class="counter-total" id="counterTotal">04</span>
+        </div>
+        <div class="slide-progress" id="slideProgress"></div>
+        <div class="scroll-cue">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
+        <div class="hero-strip">
+            <div class="hero-strip-inner">
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="strip-text"><b data-i18n="metric_1_title">أمن 24/7</b><small data-i18n="metric_1_sub">كاميرات · دخول آمن</small></div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-wifi"></i></div>
+                    <div class="strip-text"><b data-i18n="metric_2_title">1 Gbps</b><small data-i18n="metric_2_sub">إنترنت فائق السرعة</small></div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-mug-hot"></i></div>
+                    <div class="strip-text"><b data-i18n="metric_3_title">مجاني دائماً</b><small data-i18n="metric_3_sub">قهوة · شاي · مشروبات</small></div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-clock"></i></div>
+                    <div class="strip-text"><b data-i18n="metric_4_title">متاح 24/7</b><small data-i18n="metric_4_sub">كل أيام الأسبوع</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES SECTION ===== -->
+    <section class="features-section" id="services">
+        <div class="container">
+            <div class="feat-header-shine"></div>
+            <div class="feat-header">
+                <div class="feat-tag" data-i18n="feat_tag">ما يميّزنا</div>
+                <h2 data-i18n="feat_title">كل ما تحتاجه<br><b>تحت سقف واحد</b></h2>
+                <div class="feat-rule"></div>
+                <p data-i18n="feat_desc">صمّمنا كل تفصيلة لتمنحك أقصى تركيز وأعلى إنتاجية كل يوم</p>
+            </div>
+            <div class="feat-grid" id="featGrid">
+                <div class="feat-card" data-d="1">
+                    <div class="card-shine"></div>
+                    <div class="feat-icon"><i class="fas fa-lock"></i></div>
+                    <h4 data-i18n="feat_1_title">أمن وخصوصية</h4>
+                    <p data-i18n="feat_1_desc">كاميرات مراقبة ذكية وبطاقات دخول مؤمّنة — بياناتك وأعمالك محمية على مدار الساعة</p>
+                    <span class="feat-num">01</span>
+                </div>
+                <div class="feat-card" data-d="2">
+                    <div class="card-shine"></div>
+                    <div class="feat-icon"><i class="fas fa-wifi"></i></div>
+                    <h4 data-i18n="feat_2_title">إنترنت فائق السرعة</h4>
+                    <p data-i18n="feat_2_desc">ألياف ضوئية بسرعة 1 جيجابت — لا تقطّع ولا تأخير مهما كان حجم ملفاتك</p>
+                    <span class="feat-num">02</span>
+                </div>
+                <div class="feat-card" data-d="3">
+                    <div class="card-shine"></div>
+                    <div class="feat-icon"><i class="fas fa-door-open"></i></div>
+                    <h4 data-i18n="feat_3_title">مكاتب خاصة</h4>
+                    <p data-i18n="feat_3_desc">غرف مغلقة بالكامل لمن يحتاج عزلة تامة — فكّر بعمق وأنجز بكفاءة عالية</p>
+                    <span class="feat-num">03</span>
+                </div>
+                <div class="feat-card" data-d="4">
+                    <div class="card-shine"></div>
+                    <div class="feat-icon"><i class="fas fa-mug-hot"></i></div>
+                    <h4 data-i18n="feat_4_title">قهوة مجانية دائماً</h4>
+                    <p data-i18n="feat_4_desc">قهوة عربية، إسبريسو وشاي أعشاب مجانية طوال اليوم — ابدأ صباحك بنشاط وطاقة</p>
+                    <span class="feat-num">04</span>
+                </div>
+                <div class="feat-card" data-d="5">
+                    <div class="card-shine"></div>
+                    <div class="feat-icon"><i class="fas fa-headset"></i></div>
+                    <h4 data-i18n="feat_5_title">دعم فني فوري</h4>
+                    <p data-i18n="feat_5_desc">فريق متخصص على بُعد نداء — من إعدادات الشبكة حتى الطباعة، نحلّ لك كل شيء</p>
+                    <span class="feat-num">05</span>
+                </div>
+                <div class="feat-card" data-d="6">
+                    <div class="card-shine"></div>
+                    <div class="feat-icon"><i class="fas fa-users"></i></div>
+                    <h4 data-i18n="feat_6_title">غرف اجتماعات</h4>
+                    <p data-i18n="feat_6_desc">5 غرف مجهزة بشاشات 4K ونظام صوت احترافي — مثالية لعروضك مع العملاء</p>
+                    <span class="feat-num">06</span>
+                </div>
+            </div>
+            <div class="feat-cta">
+                <span class="feat-cta-text" data-i18n="feat_cta_text">تعرف على قصتنا وشغفنا</span>
+                <a href="about.html" class="feat-cta-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-i18n="feat_cta_btn">اعرف أكثر عنا</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPACES SECTION ===== -->
+    <section class="spaces-section" id="spaces">
+        <i class="fas fa-gem sp-float-ico"></i>
+        <i class="fas fa-star sp-float-ico"></i>
+        <i class="fas fa-wifi sp-float-ico"></i>
+        <i class="fas fa-mug-hot sp-float-ico"></i>
+        <i class="fas fa-shield-halved sp-float-ico"></i>
+        <i class="fas fa-crown sp-float-ico"></i>
+        <i class="fas fa-feather sp-float-ico"></i>
+        <i class="fas fa-compass sp-float-ico"></i>
+        <i class="fas fa-lightbulb sp-float-ico"></i>
+        <i class="fas fa-leaf sp-float-ico"></i>
+        <div class="container">
+            <div class="sp-header" id="spHeader">
+                <div class="sp-tag" data-i18n="sp_tag">مساحاتنا</div>
+                <h2 data-i18n="sp_title">اختر مساحتك<br><b>المثالية</b></h2>
+                <div class="sp-rule"></div>
+                <p data-i18n="sp_desc">أربعة بيئات مختلفة — كل واحدة مصمّمة لاحتياج مختلف</p>
+            </div>
+            <div class="sp-grid" id="spGrid">
+                <div class="sp-card" data-d="1">
+                    <img src="space1.png" alt="محطات العمل الفردية" loading="lazy" />
+                    <div class="sp-grid-lines"></div>
+                    <div class="sp-corner"></div>
+                    <span class="sp-num">01</span>
+                    <div class="sp-info">
+                        <div class="sp-info-icon"><i class="fas fa-user"></i></div>
+                        <div class="sp-info-text"><h5 data-i18n="sp_1_title">محطات العمل الفردية</h5><p class="sp-desc" data-i18n="sp_1_desc">بيئة هادئة مع إضاءة مثالية للتركيز</p></div>
+                    </div>
+                    <div class="sp-bar"></div>
+                </div>
+                <div class="sp-card" data-d="2">
+                    <img src="space2.png" alt="غرف الاجتماعات" loading="lazy" />
+                    <div class="sp-grid-lines"></div>
+                    <div class="sp-corner"></div>
+                    <span class="sp-num">02</span>
+                    <div class="sp-info">
+                        <div class="sp-info-icon"><i class="fas fa-users"></i></div>
+                        <div class="sp-info-text"><h5 data-i18n="sp_2_title">غرف الاجتماعات</h5><p class="sp-desc" data-i18n="sp_2_desc">شاشات 4K ونظام صوت احترافي</p></div>
+                    </div>
+                    <div class="sp-bar"></div>
+                </div>
+                <div class="sp-card" data-d="3">
+                    <img src="space3.png" alt="مكاتب خاصة" loading="lazy" />
+                    <div class="sp-grid-lines"></div>
+                    <div class="sp-corner"></div>
+                    <span class="sp-num">03</span>
+                    <div class="sp-info">
+                        <div class="sp-info-icon"><i class="fas fa-door-closed"></i></div>
+                        <div class="sp-info-text"><h5 data-i18n="sp_3_title">مكاتب خاصة</h5><p class="sp-desc" data-i18n="sp_3_desc">عزلة تامة لأقصى إنتاجية</p></div>
+                    </div>
+                    <div class="sp-bar"></div>
+                </div>
+                <div class="sp-card" data-d="4">
+                    <img src="space4.png" alt="المساحة المفتوحة" loading="lazy" />
+                    <div class="sp-grid-lines"></div>
+                    <div class="sp-corner"></div>
+                    <span class="sp-num">04</span>
+                    <div class="sp-info">
+                        <div class="sp-info-icon"><i class="fas fa-door-open"></i></div>
+                        <div class="sp-info-text"><h5 data-i18n="sp_4_title">المساحة المفتوحة</h5><p class="sp-desc" data-i18n="sp_4_desc">أجواء تعاونية ملهمة</p></div>
+                    </div>
+                    <div class="sp-bar"></div>
+                </div>
+            </div>
+            <div class="sp-cta">
+                <div class="sp-cta-line"></div>
+                <a href="#" class="sp-cta-btn"><i class="fas fa-th-large"></i><span data-i18n="sp_btn">عرض جميع المساحات</span></a>
+                <div class="sp-cta-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing-section" id="pricing">
+        <div class="pricing-ray-right"></div>
+        <div class="pricing-ray-left"></div>
+        <div class="pricing-ray-right-bottom"></div>
+        <i class="fas fa-crown pr-float-ico"></i>
+        <i class="fas fa-gem pr-float-ico"></i>
+        <i class="fas fa-star pr-float-ico"></i>
+        <i class="fas fa-bolt pr-float-ico"></i>
+        <i class="fas fa-feather pr-float-ico"></i>
+        <i class="fas fa-compass pr-float-ico"></i>
+        <div class="container">
+            <div class="pr-header">
+                <div class="pr-tag" data-i18n="pr_tag">الباقات والأسعار</div>
+                <h2 data-i18n="pr_title">استثمر في<br><b>نجاحك</b></h2>
+                <div class="pr-rule"></div>
+                <p data-i18n="pr_desc">مرونة كاملة — لا عقود طويلة ولا التزامات، ابدأ متى تشاء</p>
+                <div class="pr-toggle">
+                    <button class="pr-toggle-btn active" id="btnMonthly" data-i18n="pr_toggle_monthly">شهري</button>
+                    <button class="pr-toggle-btn" id="btnYearly">
+                        <span data-i18n="pr_toggle_yearly">سنوي</span>
+                        <span data-i18n="pr_toggle_save">وفّر 20%</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pr-grid" id="prGrid">
+                <!-- Plan 1: Day Pass -->
+                <div class="pricing-card" data-d="1">
+                    <div class="card-shine-center"></div>
+                    <div class="pr-icon"><i class="fas fa-sun"></i></div>
+                    <p class="pr-name" data-i18n="pr_plan_1">يوم واحد</p>
+                    <div class="pr-price"><span class="sym">$</span><span class="amt" data-monthly="15" data-yearly="12">15</span><span class="per" data-i18n="pr_per_day"> / يوم</span></div>
+                    <div class="pr-div"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_1_1">الوصول لساعات العمل</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_1_2">إنترنت عالي السرعة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_1_3">استخدام المرافق المشتركة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_1_4">قهوة ومشروبات مجانية</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_1_5">غرفة اجتماعات (2 ساعات)</span></li>
+                    </ul>
+                    <button class="btn-pricing" onclick="openBookingModal()" data-i18n="pr_btn">احجز الآن</button>
+                    <div class="pr-bar"></div>
+                </div>
+                <!-- Plan 2: Monthly (Featured) -->
+                <div class="pricing-card pricing-card-featured" data-d="2">
+                    <div class="card-shine-center"></div>
+                    <i class="fas fa-crown pr-crown-float"></i>
+                    <div class="pricing-badge"><i class="fas fa-crown"></i> <span data-i18n="pr_badge">الأكثر طلباً</span></div>
+                    <div class="pr-icon"><i class="fas fa-calendar-days"></i></div>
+                    <p class="pr-name" data-i18n="pr_plan_2">شهري</p>
+                    <div class="pr-price"><span class="sym">$</span><span class="amt" data-monthly="99" data-yearly="79">99</span><span class="per" data-i18n="pr_per_month"> / شهر</span></div>
+                    <div class="pr-div"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_2_1">طباعة ومسح ضوئي</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_2_2">إنترنت عالي السرعة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_2_3">قهوة ومشروبات مجانية</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_2_4">وصول 24/7</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_2_5">غرفة اجتماعات (4 ساعات)</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_2_6">أولوية في الحجز</span></li>
+                    </ul>
+                    <button class="btn-pricing-featured" onclick="openBookingModal()" data-i18n="pr_btn">احجز الآن</button>
+                    <div class="pr-bar"></div>
+                </div>
+                <!-- Plan 3: Dedicated Office -->
+                <div class="pricing-card" data-d="3">
+                    <div class="card-shine-center"></div>
+                    <div class="pr-icon"><i class="fas fa-briefcase"></i></div>
+                    <p class="pr-name" data-i18n="pr_plan_3">مكتب مخصص</p>
+                    <div class="pr-price"><span class="sym">$</span><span class="amt" data-monthly="149" data-yearly="119">149</span><span class="per" data-i18n="pr_per_month"> / شهر</span></div>
+                    <div class="pr-div"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_3_1">مكتب خاص مخصص</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_3_2">إنترنت عالي السرعة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_3_3">قهوة ومشروبات مجانية</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_3_5">خزانة تخزين خاصة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pr_feat_3_6">غرفة اجتماعات (8 ساعات)</span></li>
+                    </ul>
+                    <button class="btn-pricing" onclick="openBookingModal()" data-i18n="pr_btn">احجز الآن</button>
+                    <div class="pr-bar"></div>
+                </div>
+            </div>
+            <div class="stats-wrap" id="statsWrap">
+                <div class="stats-grid">
+                    <div class="stat-item-new"><i class="fas fa-users"></i><div class="stat-text"><h4 data-count="200">0</h4><p data-i18n="stat_1">عضو سعيد</p></div></div>
+                    <div class="stat-item-new"><i class="fas fa-laptop-code"></i><div class="stat-text"><h4 data-count="50">0</h4><p data-i18n="stat_2">محطة عمل</p></div></div>
+                    <div class="stat-item-new"><i class="fas fa-building"></i><div class="stat-text"><h4 data-count="5">0</h4><p data-i18n="stat_3">غرف اجتماعات</p></div></div>
+                    <div class="stat-item-new"><i class="fas fa-coffee"></i><div class="stat-text"><h4 data-count="1000">0</h4><p data-i18n="stat_4">كوب قهوة شهرياً</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-section" id="footer">
+        <div class="ft-grid-bg"></div>
+        <div class="ft-glow-2"></div>
+        <div class="ft-glow-3"></div>
+        <div class="ft-glow-4"></div>
+        <div id="ftSparkles"></div>
+        <div class="container">
+            <div class="ft-top" id="ftTop">
+                <div class="ft-col" data-d="1">
+                    <div class="ft-col-content">
+                        <div class="ft-brand-logo"><img src="logo2.png" alt="Golden Hub Logo" class="ft-logo-image" /></div>
+                        <p class="ft-brand-desc" data-i18n="ft_desc">مساحة عمل فاخرة صُمّمت لرواد الأعمال والفريلانسرز الباحثين عن بيئة احترافية تُلهم الإبداع وتدعم النجاح والتطور .</p>
+                        <div class="ft-brand-social">
+                            <a href="https://www.facebook.com/share/14iPzP1RcJv/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/golden.hub.plus?igsh=emZkbzdoc2h2ejVq" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@golden.hup" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://wa.me/972595040260" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-col" data-d="2">
+                    <h4 class="ft-col-title" data-i18n="ft_quick_title">روابط سريعة</h4>
+                    <ul class="ft-quick-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-left"></i> <span data-i18n="ft_link_home">الرئيسية</span></a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-left"></i> <span data-i18n="ft_link_about">من نحن</span></a></li>
+                        <li><a href="index.html#spaces"><i class="fas fa-chevron-left"></i> <span data-i18n="ft_link_spaces">المساحات</span></a></li>
+                        <li><a href="index.html#pricing"><i class="fas fa-chevron-left"></i> <span data-i18n="ft_link_pricing">الأسعار</span></a></li>
+                    </ul>
+                </div>
+                <div class="ft-col" data-d="3">
+                    <h4 class="ft-col-title" data-i18n="ft_contact_title">تواصل معنا</h4>
+                    <div class="ft-contact-list">
+                        <div class="ft-contact-item">
+                            <div class="ft-contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="ft-contact-text"><strong data-i18n="ft_phone_label">هاتف</strong><a href="tel:+972592279582" dir="ltr">+972 59 227 9582</a></div>
+                        </div>
+                        <div class="ft-contact-item">
+                            <div class="ft-contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ft-contact-text"><strong data-i18n="ft_email_label">بريد إلكتروني</strong><a href="mailto:golden.hup.25@gmail.com">golden.hup.25@gmail.com</a></div>
+                        </div>
+                        <div class="ft-contact-item">
+                            <div class="ft-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ft-contact-text"><strong data-i18n="ft_address_label">العنوان</strong><a href="https://www.google.com/maps?q=غزة%20السرايا%20بجوار%20هيثم%20الشوا%20عمارة%20السوسي%20الطابق%20الثاني" target="_blank" rel="noopener" class="ft-contact-map-link" data-i18n="ft_address_link">غزة - السرايا، بجوار هيثم الشوا</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-divider"></div>
+            <div class="ft-bottom">
+                <p>© <span id="currentYear"></span> Golden Hub. <span data-i18n="ft_copyright">جميع الحقوق محفوظة.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL-TO-TOP BUTTON ===== -->
+    <button class="ft-totop" id="ftToTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js"></script>
+</body>
+</html>
