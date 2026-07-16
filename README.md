@@ -1,6 +1,6 @@
 Golden Hub – Co-Working Space Website
 
-<div align="center"><img src="assets/images/logo1.png" alt="Golden Hub Logo" width="180">A Modern and Responsive Co-Working Space Website
+<div align="center"><img src="logo1.png" alt="Golden Hub Logo" width="180">A Modern and Responsive Co-Working Space Website
 
 <p>
   <a href="https://hayasalha2003-lang.github.io/GoldenHub/">Live Demo</a>
